@@ -1,0 +1,5 @@
+<app-single-post *ngFor="let p of Posts" [DisplayPost]="p" (deleted)="OnDelete($event)"></app-single-post>
+
+<button *ngIf="runProgram==false" (click)="runProgram=true">Write Post</button>
+
+<app-post-form *ngIf="runProgram" (PostCreated)="AddPost($event)"></app-post-form>
